@@ -1,0 +1,159 @@
+
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rosmile Rosemary Hair Oil</title>
+
+  <!-- خط اختياري -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{
+      --rose:#b57fb3;
+      --rose-dark:#a06aa0;
+      --ink:#4b3b47;
+      --muted:#7b6d83;
+      --bg:#fef9fb;
+      --card:#ffffff;
+      --soft:#f8edf3;
+      --grad1:#fce4ec;
+      --grad2:#ede7f6;
+    }
+
+    *{box-sizing:border-box}
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg);
+      color: var(--ink);
+      margin: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: linear-gradient(135deg, var(--grad1), var(--grad2));
+    }
+
+    header img {
+      width: 120px; height: 120px; border-radius: 50%;
+      object-fit: cover; display: block; margin: 0 auto 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 2.2rem; color: #6d4c7d; margin: 0 0 .5rem;
+    }
+
+    header p { font-size: 1.1rem; color: var(--muted); margin: 0; }
+
+    .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+
+    .product, .about {
+      background: var(--card);
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      overflow: hidden;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .product img {
+      width: 100%; max-width: 400px; border-radius: 20px; margin-bottom: 1.25rem;
+    }
+
+    h2 { color: #6d4c7d; font-size: 1.6rem; margin: 0 0 .5rem; }
+    p  { color: var(--muted); font-size: 1rem; margin: 0 0 1.25rem; line-height: 1.7; }
+
+    .btn {
+      display: inline-block;
+      padding: .9rem 1.6rem;
+      background-color: var(--rose);
+      color: #fff; border-radius: 999px; text-decoration: none;
+      font-weight: 600; transition: transform .15s ease, background-color .2s ease, box-shadow .2s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,.08);
+    }
+    .btn:hover{ background-color: var(--rose-dark); transform: translateY(-1px); }
+
+    .cta-row{ display:flex; gap:.75rem; justify-content:center; flex-wrap:wrap; }
+
+    .about{
+      background: linear-gradient(135deg, #fce4ec, #f9f4fb);
+      margin-top: 2rem;
+    }
+
+    footer {
+      text-align: center; padding: 2rem; background-color: var(--soft);
+      color: var(--muted); font-size: .95rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.9rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- 🌸 اللوجو (تأكدي من اسم الملف والمسار) -->
+    <img src="rosmile-logo.png" alt="Rosmile Logo" />
+    <h1>Rosmile Rosemary Hair Oil</h1>
+    <p>100% طبيعي – مصنوع بحب</p>
+  </header>
+
+  <main class="container">
+    <section class="product" aria-label="المنتج">
+      <img src="rosmile-hairoil.png" alt="زيت إكليل الجبل من Rosmile" />
+      <h2>ينمّي الشعر بطريقة طبيعية</h2>
+      <p>مزيج طبيعي من زيت إكليل الجبل واللوز الحلو وشجرة الشاي وفيتامين E. يقلّل تساقط الشعر ويغذّي الجذور ويمنح لمعانًا صحيًا.</p>
+
+      <!-- ✅ زر DM مباشر على إنستغرام عبر ig.me مع رسالة جاهزة -->
+      <div class="cta-row">
+        <a
+          class="btn"
+          href="https://ig.me/m/rosmilehandmadesoap?text=%F0%9F%8C%BF%20Hello%20Rosmile!%20I%20want%20to%20order%20the%20Rosemary%20Hair%20Oil.%20Please%20help%20me%20with%20details.%20Thank%20you%E2%9C%A8"
+          target="_blank" rel="noopener"
+        >💬 تواصلي على إنستغرام</a>
+      </div>
+    </section>
+
+    <section class="about" aria-label="عن Rosmile">
+      <h2>عن Rosmile</h2>
+      <p>
+        Rosmile وُلدت من حب الجمال الطبيعي والعناية الذاتية الهادئة.<br />
+        كل منتج يُصنع يدويًا من زيوت نباتية عالية الجودة.<br />
+        هدفنا بسيط — أن نجعل لمسة الطبيعة جزءًا من روتينك اليومي.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Rosmile – Handmade with Love
+  </footer>
+
+  <script>
+    // سنة ديناميكية
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // (اختياري) محاولة فتح تطبيق إنستغرام أولاً ثم الرجوع للرابط الآمن ig.me
+    // يُفضّل تركه كما هو لأن ig.me عادةً كافٍ على الموبايل.
+    /*
+    document.querySelector('.btn').addEventListener('click', function(e){
+      var appLink = 'instagram://user?username=rosmilehandmadesoap';
+      var webFallback = this.href;
+      var opened = false;
+      var now = Date.now();
+      // محاولة فتح التطبيق
+      window.location.href = appLink;
+      // بعد 800ms لو ما فتح، نروح للـ ig.me
+      setTimeout(function(){
+        if (Date.now() - now < 2000) window.location.href = webFallback;
+      }, 800);
+      // منع أي سلوك إضافي
+      e.preventDefault();
+    });
+    */
+  </script>
+</body>
+</html>
