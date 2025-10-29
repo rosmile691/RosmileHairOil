@@ -1,159 +1,244 @@
-
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rosmile Rosemary Hair Oil</title>
 
-  <!-- خط اختياري -->
+  <!-- Arabic-friendly Google font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;700&display=swap" rel="stylesheet" />
 
   <style>
-    :root{
-      --rose:#b57fb3;
-      --rose-dark:#a06aa0;
-      --ink:#4b3b47;
-      --muted:#7b6d83;
-      --bg:#fef9fb;
-      --card:#ffffff;
-      --soft:#f8edf3;
-      --grad1:#fce4ec;
-      --grad2:#ede7f6;
+    body{
+      font-family:"Tajawal","Poppins",sans-serif;
+      background:#fef9fb;
+      color:#4b3b47;
+      margin:0;
+      line-height:1.8;
+      direction:rtl;
+      text-align:right;
     }
 
-    *{box-sizing:border-box}
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: var(--bg);
-      color: var(--ink);
-      margin: 0;
+    /* HEADER */
+    header{
+      text-align:center;
+      padding:2.5rem 1rem 2rem;
+      background:linear-gradient(135deg,#fce4ec,#ede7f6);
+      position:relative;
+      overflow:hidden;
     }
 
-    header {
-      text-align: center;
-      padding: 3rem 1rem;
-      background: linear-gradient(135deg, var(--grad1), var(--grad2));
+    .brand{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:.75rem;
+      margin:0 auto 1rem;
     }
 
-    header img {
-      width: 120px; height: 120px; border-radius: 50%;
-      object-fit: cover; display: block; margin: 0 auto 1rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    .brand img.logo{
+      width:56px;height:56px;object-fit:contain;border-radius:50%;
+      background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.08);
     }
 
-    header h1 {
-      font-size: 2.2rem; color: #6d4c7d; margin: 0 0 .5rem;
+    .brand .name{
+      font-weight:700;color:#6a1b9a;font-size:1.1rem;
     }
 
-    header p { font-size: 1.1rem; color: var(--muted); margin: 0; }
-
-    .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
-
-    .product, .about {
-      background: var(--card);
-      border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-      overflow: hidden;
-      text-align: center;
-      padding: 2rem;
+    /* PRODUCT IMAGE with reflection */
+    .product-wrapper{
+      position:relative;
+      display:inline-block;
     }
 
-    .product img {
-      width: 100%; max-width: 400px; border-radius: 20px; margin-bottom: 1.25rem;
+    header img.product{
+      width:220px;
+      height:220px;
+      border-radius:50%;
+      object-fit:cover;
+      display:block;
+      margin:.25rem auto 0;
+      box-shadow:0 6px 25px rgba(0,0,0,.18);
+      background:#fff;
+      border:5px solid #f8d5e0;
+      position:relative;
+      z-index:2;
     }
 
-    h2 { color: #6d4c7d; font-size: 1.6rem; margin: 0 0 .5rem; }
-    p  { color: var(--muted); font-size: 1rem; margin: 0 0 1.25rem; line-height: 1.7; }
-
-    .btn {
-      display: inline-block;
-      padding: .9rem 1.6rem;
-      background-color: var(--rose);
-      color: #fff; border-radius: 999px; text-decoration: none;
-      font-weight: 600; transition: transform .15s ease, background-color .2s ease, box-shadow .2s ease;
-      box-shadow: 0 4px 12px rgba(0,0,0,.08);
-    }
-    .btn:hover{ background-color: var(--rose-dark); transform: translateY(-1px); }
-
-    .cta-row{ display:flex; gap:.75rem; justify-content:center; flex-wrap:wrap; }
-
-    .about{
-      background: linear-gradient(135deg, #fce4ec, #f9f4fb);
-      margin-top: 2rem;
+    .product-wrapper::after{
+      content:"";
+      position:absolute;
+      top:220px;
+      left:0; right:0;
+      height:80px;
+      background:linear-gradient(to bottom,rgba(255,255,255,.3),transparent);
+      transform:scaleY(-1);
+      border-radius:50%;
+      filter:blur(4px);
+      opacity:0.6;
     }
 
-    footer {
-      text-align: center; padding: 2rem; background-color: var(--soft);
-      color: var(--muted); font-size: .95rem;
+    .shadow-floor{
+      width:160px;
+      height:25px;
+      background:radial-gradient(ellipse at center,rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 70%);
+      margin:-10px auto 1.5rem;
+      border-radius:50%;
+      filter:blur(6px);
     }
 
-    @media (max-width: 600px) {
-      header h1 { font-size: 1.9rem; }
+    header h1{
+      font-size:2rem;
+      color:#6a1b9a;
+      margin:.25rem 0 0;
+      line-height:1.2;
+    }
+
+    /* ENGLISH INTRO */
+    .use-box{
+      padding:1.25rem 1rem 0;
+    }
+    .use-box p{
+      color:#5a4a5e;font-size:1rem;line-height:1.7;
+      direction:ltr;unicode-bidi:plaintext;text-align:center;
+      margin:0 auto;max-width:680px;
+    }
+
+    /* ENGLISH BENEFITS */
+    .benefits-en{
+      direction:ltr;unicode-bidi:plaintext;text-align:left;
+      margin:1rem auto 0;max-width:680px;padding:0 1rem;
+    }
+    .benefits-en h3{
+      color:#8e44ad;margin:.75rem 0 .25rem;text-align:center;
+    }
+    .benefits-en ul{margin:.25rem auto 1rem;padding-left:1.2rem;}
+    .benefits-en li{margin:.25rem 0;}
+
+    /* ARABIC BLOCK */
+    .ar-block{
+      display:block !important;
+      direction:rtl;unicode-bidi:plaintext;text-align:right;
+      margin:2rem 1rem;line-height:2;color:#4b3b47;
+    }
+    .ar-block *{
+      letter-spacing:0;text-transform:none;
+      font-family:"Tajawal","Cairo","Noto Naskh Arabic",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+    }
+    .ar-block h2{
+      color:#b35aa0;font-size:1.4rem;margin:0 0 .5rem;text-align:center;
+    }
+    .ar-block p{margin:.25rem auto 0;max-width:680px;}
+    .benefits-ar{
+      margin:.5rem auto 0;max-width:680px;padding:0 1rem;
+    }
+    .benefits-ar ul{margin:.25rem 0 0 0;padding:0 1.2rem;}
+    .benefits-ar li{margin:.25rem 0;}
+
+    /* INSTAGRAM BUTTON */
+    .insta-button{
+      display:inline-block;
+      background:linear-gradient(135deg,#f48fb1,#ce93d8);
+      color:white;
+      text-decoration:none;
+      padding:.9rem 2rem;
+      border-radius:30px;
+      font-weight:600;
+      font-size:1rem;
+      margin:2rem auto 0;
+      text-align:center;
+      transition:transform .3s ease, box-shadow .3s ease;
+    }
+    .insta-button:hover{
+      transform:scale(1.05);
+      box-shadow:0 6px 18px rgba(206,147,216,0.4);
+    }
+
+    /* FOOTER */
+    footer{
+      text-align:center;background:#fce4ec;padding:1rem;
+      font-size:.9rem;color:#4b3b47;margin-top:2rem;
     }
   </style>
 </head>
+
 <body>
+  <!-- HEADER -->
   <header>
-    <!-- 🌸 اللوجو (تأكدي من اسم الملف والمسار) -->
-    <img src="rosmile-logo.png" alt="Rosmile Logo" />
-    <h1>Rosmile Rosemary Hair Oil</h1>
-    <p>100% طبيعي – مصنوع بحب</p>
+    <div class="brand">
+      <img class="logo" src="rosmile-logo.png" alt="Rosmile Logo" />
+      <span class="name">Rosmile Handmade Soap</span>
+    </div>
+
+    <div class="product-wrapper">
+      <img class="product" src="rosmile-hairoil.png" alt="Rosmile Rosemary Hair Oil" />
+    </div>
+    <div class="shadow-floor"></div>
+
+    <h1><bdi dir="ltr">Rosmile Rosemary</bdi><br/>Hair Oil</h1>
   </header>
 
-  <main class="container">
-    <section class="product" aria-label="المنتج">
-      <img src="rosmile-hairoil.png" alt="زيت إكليل الجبل من Rosmile" />
-      <h2>ينمّي الشعر بطريقة طبيعية</h2>
-      <p>مزيج طبيعي من زيت إكليل الجبل واللوز الحلو وشجرة الشاي وفيتامين E. يقلّل تساقط الشعر ويغذّي الجذور ويمنح لمعانًا صحيًا.</p>
+  <!-- ENGLISH INTRO -->
+  <section class="use-box">
+    <p>Discover the natural power of Rosmile Rosemary Hair Oil – crafted with love for stronger, shinier hair.</p>
+  </section>
 
-      <!-- ✅ زر DM مباشر على إنستغرام عبر ig.me مع رسالة جاهزة -->
-      <div class="cta-row">
-        <a
-          class="btn"
-          href="https://ig.me/m/rosmilehandmadesoap?text=%F0%9F%8C%BF%20Hello%20Rosmile!%20I%20want%20to%20order%20the%20Rosemary%20Hair%20Oil.%20Please%20help%20me%20with%20details.%20Thank%20you%E2%9C%A8"
-          target="_blank" rel="noopener"
-        >💬 تواصلي على إنستغرام</a>
-      </div>
-    </section>
+  <!-- ENGLISH BENEFITS -->
+  <section class="benefits-en">
+    <h3>Benefits</h3>
+    <ul>
+      <li>Strengthens hair and reduces fall</li>
+      <li>Stimulates growth and improves scalp health</li>
+      <li>Adds natural shine and softness</li>
+      <li>Hydrates and nourishes with vitamin E</li>
+    </ul>
+    <h3>Ingredients</h3>
+    <ul>
+      <li>Rosemary oil</li>
+      <li>Sweet almond oil</li>
+      <li>Tea tree oil</li>
+      <li>Vitamin E</li>
+    </ul>
+  </section>
 
-    <section class="about" aria-label="عن Rosmile">
-      <h2>عن Rosmile</h2>
-      <p>
-        Rosmile وُلدت من حب الجمال الطبيعي والعناية الذاتية الهادئة.<br />
-        كل منتج يُصنع يدويًا من زيوت نباتية عالية الجودة.<br />
-        هدفنا بسيط — أن نجعل لمسة الطبيعة جزءًا من روتينك اليومي.
-      </p>
-    </section>
-  </main>
+  <!-- ARABIC BLOCK -->
+  <section class="ar-block">
+    <h2>فوائد زيت إكليل الجبل من <bdi dir="ltr">Rosmile</bdi></h2>
+    <p>
+      يغذّي بصيلات الشعر، يقلّل التساقط، ويمنحك لمعانًا طبيعيًا.
+      يُستخدم <span dir="ltr">2–3</span> مرات أسبوعيًا مع تدليك لطيف لفروة الرأس.
+    </p>
+
+    <div class="benefits-ar">
+      <h3 style="color:#b35aa0;text-align:center;">الفوائد</h3>
+      <ul>
+        <li>تقوية الشعر وتقليل التساقط</li>
+        <li>تحفيز النمو وتحسين صحة فروة الرأس</li>
+        <li>ترطيب ولمعان طبيعي</li>
+        <li>تغذية عميقة بفضل فيتامين E</li>
+      </ul>
+
+      <h3 style="color:#b35aa0;text-align:center;margin-top:1rem;">المكونات</h3>
+      <ul>
+        <li>زيت إكليل الجبل</li>
+        <li>زيت اللوز الحلو</li>
+        <li>زيت شجرة الشاي</li>
+        <li>فيتامين E</li>
+      </ul>
+    </div>
+
+    <!-- INSTAGRAM BUTTON -->
+    <div style="text-align:center;">
+      <a href="https://www.instagram.com/rosmilehandmadesoap" target="_blank" class="insta-button">
+        🌸 Follow us on Instagram
+      </a>
+    </div>
+  </section>
 
   <footer>
-    © <span id="year"></span> Rosmile – Handmade with Love
+    © 2025 Rosmile Handmade Soap. All rights reserved.
   </footer>
-
-  <script>
-    // سنة ديناميكية
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // (اختياري) محاولة فتح تطبيق إنستغرام أولاً ثم الرجوع للرابط الآمن ig.me
-    // يُفضّل تركه كما هو لأن ig.me عادةً كافٍ على الموبايل.
-    /*
-    document.querySelector('.btn').addEventListener('click', function(e){
-      var appLink = 'instagram://user?username=rosmilehandmadesoap';
-      var webFallback = this.href;
-      var opened = false;
-      var now = Date.now();
-      // محاولة فتح التطبيق
-      window.location.href = appLink;
-      // بعد 800ms لو ما فتح، نروح للـ ig.me
-      setTimeout(function(){
-        if (Date.now() - now < 2000) window.location.href = webFallback;
-      }, 800);
-      // منع أي سلوك إضافي
-      e.preventDefault();
-    });
-    */
-  </script>
 </body>
 </html>
